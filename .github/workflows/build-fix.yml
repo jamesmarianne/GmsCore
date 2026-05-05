@@ -44,7 +44,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Default release APK
-        run: ./gradlew :play-services-core:assembleDefaultRelease --no-daemon --stacktrace --configuration-cache=off -PignoreGit=true
+        run: ./gradlew :play-services-core:assembleDefaultRelease --no-daemon --stacktrace --no-configuration-cache -PignoreGit=true
         env:
           ANDROID_HOME: ${{ env.ANDROID_HOME }}
 
