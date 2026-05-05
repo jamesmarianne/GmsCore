@@ -51,7 +51,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Default release APK
-        run: ./gradlew :play-services-core:assembleVtmDefaultRelease --no-daemon --stacktrace --no-configuration-cache
+        run: ./gradlew :play-services-core:assembleVtmDefaultDebug --no-daemon --stacktrace --no-configuration-cache
         env:
           ANDROID_HOME: ${{ env.ANDROID_HOME }}
 
@@ -59,5 +59,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GmsCore-PR290-fix
-          path: play-services-core/build/outputs/apk/vtmDefault/release/*.apk
+          path: play-services-core/build/outputs/apk/vtmDefault/debug/*.apk
           retention-days: 7
