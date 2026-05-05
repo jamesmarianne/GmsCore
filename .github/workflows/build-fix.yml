@@ -1,7 +1,7 @@
 name: Build GmsCore PR #290 Fix
 
 on:
-  workflow_dispatch:   # manual trigger â€” just click "Run workflow"
+  workflow_dispatch:   # manual trigger — just click "Run workflow"
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
         with:
           repository: zappybiby/GmsCore
           ref: fix/gmscore-aa-compat-2026-02-pr
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
